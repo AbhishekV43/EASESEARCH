@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-image: url('https://img.freepik.com/free-photo/finance-elements-frame_23-2148080960.jpg?w=740&t=st=1699190511~exp=1699191111~hmac=aecdf65f6adca7c464017df2b148b2404d9cc8a7987e8982b93fc4087ee50587.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    footer img {
+      float: left;
+      width: 125px;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+
+    #nav {
+      display: inline-block;
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+      width: 150px;
+      height: 125px;
+    }
+
+
+
+    header {
+
+      background-color: #333;
+      padding: 0%;
+      margin: 0%;
+      padding: 10px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      font-size: 35px;
+    }
+
+    .right img {
+      float: left;
+      width: 125px;
+      height: 108px;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      position: static;
+      top: 5px;
+      left: 0;
+      background-color: #585858;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+
+    }
+    #user {
+      display: none;
+      flex-direction: column;
+      position: static;
+      top: 5px;
+      left: 0;
+      background-color: #585858;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+
+    }
+    #user a{
+      padding: 5px;
+      float: left;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      font-size: 20px;
+
+    }
+
+    nav a {
+      padding: 5px;
+      float: left;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      font-size: 20px;
+    }
+
+
+    #menu-icon {
+      display: flex;
+      cursor: pointer;
+    }
+
+    #cart-icon {
+      cursor: pointer;
+      margin-left: 200px;
+      margin-right: 20px;
+
+    }
+
+    #person-icon {
+      display: flex;
+      cursor: pointer;
+      height: 60px;
+      width: 40px;
+      margin-left: 20px;
+    }
+
+    #search-bar {
+      font-size: 20px;
+      margin: 23px;
+      padding: 9px;
+      width: 450px;
+      border-radius: 10px;
+    }
+
+    .product {
+
+
+      padding: 25px;
+      margin: 20px 65px;
+      border-radius: 20px;
+      background-color: #8d8d8deb;
+      display: inline-block;
+    }
+
+    .product img {
+      cursor: pointer;
+      height: 175px;
+      display: block;
+      margin: auto;
+      width: 300px;
+    }
+
+    .product p,
+    h2 {
+      text-align: center;
+    }
+
+    .product button {
+
+      margin-left: 120px;
+      /* margin: auto; */
+
+    }
+
+    div {
+      display: block;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: auto;
+      position: static;
+      bottom: 0;
+      width: 100%;
+      margin-top: 50px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="right">
+    <img src="LOGO1.PNG" alt="Logo">
+  </div>
+
+  <header>
+    <div id="person-icon">
+      <img src="user.png" alt="">
+      <li id="user">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      <li> 
+    </div>
+    <div id="menu-icon">&#9776;</div>
+    <nav>
+      <a href="http://127.0.0.1:5500/home.html">Home</a>
+      <a href="#">About Us</a>
+      <a href="http://127.0.0.1:5500/contactus.html">Contact Us</a>
+      <a href="http://127.0.0.1:5500/customer.html">Customer Support</a>
+    </nav>
+    <input type="text" id="search-bar" placeholder="Search...">
+    <div id="cart-icon">🛒</div>
+
+  </header>
+
+
+  <section>
+    <div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/1042143/pexels-photo-1042143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="">
+        <h2>MOBILE PHONES</h2>
+        <p></p>
+        <p>Starting from ₹6999</p>
+        <button>Explore</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="">
+        <h2>Laptops & Accessories</h2>
+        <p></p>
+        <p>Starting from ₹24999</p>
+        <button>Explore</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="">
+        <h2>Fashion</h2>
+        <p></p>
+        <p>Starting from ₹499</p>
+        <button>Explore</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/128402/pexels-photo-128402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="">
+        <h2>Groceries & Daily Needs</h2>
+        <p></p>
+        <p>Starting from ₹19</p>
+        <button>Explore</button>
+
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="">
+        <h2>Furniture</h2>
+        <p></p>
+        <p>Starting from ₹499</p>
+        <button>Explore</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="">
+        <h2>Electronic Accessories</h2>
+        <p></p>
+        <p>Starting from ₹99</p>
+        <button>Explore</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuIcon = document.getElementById('menu-icon');
+      var nav = document.querySelector('nav');
+
+      menuIcon.addEventListener('click', function () {
+        nav.style.display = (nav.style.display === 'none' || nav.style.display === '') ? 'flex' : 'none';
+      });
+    });
+  </script>
+
+</body>
+<div>
+  <footer>
+    <img src="LOGO1.PNG" alt="Logo">
+    <p style="padding-top: 25px;">&copy; 2023 EASESEARCH Pvt Ltd. All rights reserved.</p>
+    <p><a href="#" style="color: white;">Terms of Service</a> | <a href="#" style="color: white;">Privacy Policy</a></p>
+  </footer>
+</div>
+
+</html>
+</body>
+
+</html>

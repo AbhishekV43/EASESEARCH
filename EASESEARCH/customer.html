@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support</title>
+    <style>
+       body {
+        background-image: url('https://img.freepik.com/free-photo/finance-elements-frame_23-2148080960.jpg?w=740&t=st=1699190511~exp=1699191111~hmac=aecdf65f6adca7c464017df2b148b2404d9cc8a7987e8982b93fc4087ee50587.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #007BFF;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        header img{
+            margin: -75px -7px;
+    float: right;
+    z-index: -1;
+    width: 70px;
+    height: 75px;
+        }
+        #logo{ 
+            margin: -90px -10px;
+    float: left;
+    z-index: -1;
+    width: 125px;
+    height: 100px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.user-input {
+    margin-top: 20px;
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+        #call-form {
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Customer Support</h1>
+        <img src="support.png" >
+        <img id= logo src="LOGO1.PNG" alt="Logo">
+    </header>
+
+    <main>
+        <div class="chat-container">
+            <!-- <div id="chat-box"></div> -->
+            <div class="user-input">
+                <input type="text" id="user-message" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <div id="call-form">
+            <h2>Request a Call</h2>
+            <form action="#" method="post" id="callRequestForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="issue">Brief Description of Your Issue:</label>
+                <textarea id="issue" name="issue" rows="4" required></textarea>
+
+                <button type="submit">Request Call</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- You may include your JavaScript code here for chat and form submission -->
+
+</body>
+</html>

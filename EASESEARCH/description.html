@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Carousel - Your E-commerce Store</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-photo/finance-elements-frame_23-2148080960.jpg?w=740&t=st=1699190511~exp=1699191111~hmac=aecdf65f6adca7c464017df2b148b2404d9cc8a7987e8982b93fc4087ee50587.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .product-description {
+            text-align: center;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        p {
+            color: #777;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Carousel</h1>
+    </header>
+
+    <section>
+        <div class="carousel-container">
+            <div class="carousel-inner">
+                <!-- Product 1 -->
+                <div class="carousel-item">
+                    <img src="product1.jpg" alt="Product 1">
+                </div>
+
+                <!-- Product 2 -->
+                <div class="carousel-item">
+                    <img src="product2.jpg" alt="Product 2">
+                </div>
+
+                <!-- Product 3 -->
+                <div class="carousel-item">
+                    <img src="product3.jpg" alt="Product 3">
+                </div>
+
+                <!-- Product 4 -->
+                <div class="carousel-item">
+                    <img src="product4.jpg" alt="Product 4">
+                </div>
+
+                <!-- Product 5 -->
+                <div class="carousel-item">
+                    <img src="product5.jpg" alt="Product 5">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Product Name</h3>
+            <p>Description of the product. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        let currentIndex = 0;
+
+        function showProduct(index) {
+            const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+            carouselInner.style.transform = `translateX(-${index * itemWidth}px)`;
+        }
+
+        function nextProduct() {
+            currentIndex = (currentIndex + 1) % 5;
+            showProduct(currentIndex);
+        }
+
+        function prevProduct() {
+            currentIndex = (currentIndex - 1 + 5) % 5;
+            showProduct(currentIndex);
+        }
+
+        setInterval(nextProduct, 3000); // Auto slide every 3 seconds
+    </script>
+
+</body>
+
+</html>

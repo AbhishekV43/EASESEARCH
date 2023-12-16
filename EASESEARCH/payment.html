@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        html{
+    scroll-behavior: smooth;
+}
+        body {
+            background-image: url('https://img.freepik.com/free-photo/finance-elements-frame_23-2148080960.jpg?w=740&t=st=1699190511~exp=1699191111~hmac=aecdf65f6adca7c464017df2b148b2404d9cc8a7987e8982b93fc4087ee50587.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        #payment-form {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #219d53;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Secure Payment Page</h1>
+    </header>
+
+    <main>
+        <form id="payment-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            
+            <label for="number">Number</label>
+            <input type="number" id="number" placeholder="Enter your number" required>
+            
+            <label for="address">Address</label>
+            <input type="address" id="address" placeholder="Enter your address" required>
+
+            <label for="payment-method">Select Payment Method</label>
+            <select id="payment-method" required>
+                <option value="" disabled selected>Select payment method</option>
+                <option value="cash">Cash on Delivery</option>
+                <option value="net-banking">Net Banking</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+
+            <!-- Additional fields for card details (visible when card payment is selected) -->
+            <div id="card-details" style="display: none;">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="Enter your card number">
+
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY">
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="Enter CVV">
+            </div>
+
+            <button type="submit">Make Payment</button>
+        </form>
+    </main>
+
+    <script>
+        // Show/hide card details based on selected payment method
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const cardDetails = document.getElementById('card-details');
+
+        paymentMethodSelect.addEventListener('change', function () {
+            if (this.value === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        });
+
+        // Add client-side validation or integrate with a payment gateway
+        document.getElementById('payment-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('This is a demo. Payment processing is not implemented.');
+        });
+    </script>
+
+</body>
+</html>
